@@ -1,34 +1,23 @@
+import ru.academy.pizzeria.objects.*;
+
 import java.util.ArrayList;
 
 public class Main {
 
-//    private static final Logger log = LogManager.getLogger(Main.class);
-
     public static void main(String[] args) {
 
-//        Configurator.setRootLevel
+        //создаем список пицц для заказа
+        Pizza pizza1 = new Pepperoni("Пепперони", 12, 10);
+        Pizza pizza2 = new Hawaiian("Гавайская", 30, 3);
+        ArrayList<Pizza> pizzaList = new ArrayList<>();
+        pizzaList.add(pizza1);
+        pizzaList.add(pizza2);
 
-//        try {
-//            Lion lion = new Lion("Лева", 10);
-//            Eagle eagle = new Eagle("Олег", 3);
-//            Dolphin dolphin = new Dolphin("Дима", 4);
-//
-//            ArrayList<Animal> listAnimal = new ArrayList<Animal>();
-//            listAnimal.add(lion);
-//            listAnimal.add(eagle);
-//            listAnimal.add(dolphin);
-//
-//            for (Animal animal: listAnimal){
-//                animal.makeSound();
-//            }
-//
-//            GroundEnclosure groundEnclosure = new GroundEnclosure(1, "");
+        //создаем заказ
+        Order order1 = new Order("заказ 1", "Иван", pizzaList);
 
-
-
-//        } catch (AgeExeption | MaxCapacityExeption | AddTypeAnimalExeptions e) {
-////            throw new RuntimeException(e);
-//            log.error("Ошибка", e);
-//        }
+        //выполняем заказ
+        Kitchen kitchen = new Kitchen(order1, 5, 1);
+        kitchen.completeOrder(order1);
     }
 }

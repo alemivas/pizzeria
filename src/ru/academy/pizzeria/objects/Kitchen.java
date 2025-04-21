@@ -1,7 +1,6 @@
 package ru.academy.pizzeria.objects;
 
-import java.util.List;
-
+// класс Кухня
 public class Kitchen {
 
     private Order order;
@@ -14,10 +13,15 @@ public class Kitchen {
         this.currentOrders = currentOrders;
     }
 
+    // метод выполнения заказа
     public void completeOrder(Order order){
-        System.out.println(order.getTotalCost());
+        System.out.println("клиент " + order.getClientName() +
+                " заказал " + order.getTotalAmountPizzas() +
+                " пиццы: " + order.getAllPizzaNames() +
+                ", общая цена - " + order.getTotalCost() + " р.");
     }
 
+    // проверка на возможность выполнения заказа
     public boolean canAcceptOrder(){
         return true;
     }
