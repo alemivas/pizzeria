@@ -7,8 +7,9 @@ public class Main {
     public static void main(String[] args) {
 
         //создаем список пицц для заказа
-        Pizza pizza1 = new Pepperoni("Пепперони", 12, 10);
-        Pizza pizza2 = new Hawaiian("Гавайская", 30, 3);
+        Pizza pizza1 = new Pepperoni(12);
+//        Pizza pizza2 = new Hawaiian(30, 3);
+        Pizza pizza2 = new Hawaiian(30);
         ArrayList<Pizza> pizzaList = new ArrayList<>();
         pizzaList.add(pizza1);
         pizzaList.add(pizza2);

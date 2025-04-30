@@ -29,8 +29,12 @@ public class Order {
     // стоимость одной пиццы считается как произведение размера на цену (price)
     public int getTotalCost(){
         int totalCost = 0;
+        int currentPizzaCost = 0;
+        System.out.println("расчет общей стоимости заказа:");
         for (Pizza pizza: pizzas){
-            totalCost += pizza.getSize() * pizza.getPrice();
+            currentPizzaCost = pizza.getSize() * pizza.getPrice();
+            System.out.println("стоимость пиццы " + pizza.getName() + ": размер " + pizza.getSize() + " * цена " + pizza.getPrice()+ " = " + currentPizzaCost);
+            totalCost += currentPizzaCost;
         }
         return totalCost;
     }

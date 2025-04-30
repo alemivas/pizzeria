@@ -3,7 +3,7 @@ package ru.academy.pizzeria.objects;
 // базовый класс всех видов пицц
 public abstract class Pizza {
 
-    private final String name;
+    protected final String name;
     private final int size;
     private final int price;
 
